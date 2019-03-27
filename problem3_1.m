@@ -24,3 +24,5 @@ t(3)=toc;
 tic
 data_PCG=collect_perturb_data(@purturb_PCG,epsilon,4,tol,m,x0);
 t(4)=toc;
+
+norm_Jacobi_GS=compute_norm(4);
