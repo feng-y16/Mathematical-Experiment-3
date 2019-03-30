@@ -1,4 +1,5 @@
-function [error]=Poisson_example(n,name,f,f_m,tol,varargin)
+function [error,t]=Poisson_example(n,name,f,f_m,tol,varargin)
+tic
 m=n*n;  
 c=linspace(0,1,n+2); 
 h=1/(n+1);
@@ -21,7 +22,7 @@ else
 end
 r=reshape(r,n,n); 
 r=[zeros(1,n+2);zeros(n,1),r,zeros(n,1);zeros(1,n+2)];
-
+t=toc;
 r_gt=zeros(n+2,n+2);
 for i=1:1:n+2
     for j=1:1:n+2
